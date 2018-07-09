@@ -7,12 +7,15 @@
             <div class="panel panel-default">
                 
                 <div class="panel-heading">
-                    Producto                
+                    Rol
                 </div>
                 
                 <div class="panel-body">
-                    <p><strong>Nombre: </strong> {{ $product->name}} </p>
-                    <p><strong>Descripción: </strong>{{ $product->description }}</p>
+                  {!! Form::model($role, ['route' => ['roles.update', $role->id], 'method' => 'PUT'])  !!}
+                    
+                    @include('roles.partials.form')
+
+                  {!! Form::close() !!}
                 </div>
             </div>
         </div>

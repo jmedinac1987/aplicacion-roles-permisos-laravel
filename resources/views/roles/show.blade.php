@@ -7,12 +7,13 @@
             <div class="panel panel-default">
                 
                 <div class="panel-heading">
-                    Producto                
+                    Rol                
                 </div>
                 
                 <div class="panel-body">
-                    <p><strong>Nombre: </strong> {{ $product->name}} </p>
-                    <p><strong>Descripción: </strong>{{ $product->description }}</p>
+                    <p><strong>Nombre: </strong> {{ $role->name}} </p>
+                    <p><strong>Slug: </strong> {{ $role->slug}} </p>
+                    <p><strong>Descripción: </strong>{{ $role->description }}</p>
                 </div>
             </div>
         </div>

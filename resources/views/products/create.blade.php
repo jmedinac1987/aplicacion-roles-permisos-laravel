@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 
                 <div class="panel-heading">
-                    Proctudo                
+                    Producto
                 </div>
                 
                 <div class="panel-body">

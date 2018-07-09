@@ -21,20 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Routes
 Route::middleware(['auth'])->group(function(){
+	
 	//Roles
-	Route::post('roles/store', 'RolController@store')->name('roles.store')->middleware('permission:roles.create');
-
-	Route::get('roles', 'RolController@index')->name('roles.index')->middleware('permission:roles.index');
-
-	Route::get('roles/create', 'RolController@create')->name('roles.create')->middleware('permission:roles.create');
-
-	Route::put('roles/{role}', 'RolController@update')->name('roles.update')->middleware('permission:roles.edit');
-
-	Route::get('roles/{role}', 'RolController@show')->name('roles.show')->middleware('permission:roles.show');
-
-	Route::delete('roles/{role}', 'RolController@destroy')->name('roles.destroy')->middleware('permission:roles.destroy');
-
-	Route::get('roles/{role}/edit', 'RolController@edit')->name('roles.edit')->middleware('permission:roles.edit');
+	Route::resource('roles', 'RolController');//Esta es una forma de como quedarian las 7 rutas del controlador de roles
 
 	//Products
 	Route::post('products/store', 'ProductController@store')->name('products.store')->middleware('permission:products.create');
